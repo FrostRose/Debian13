@@ -2,19 +2,13 @@
 # Labwc Installer for Debian 13
 set -e
 
-# --- 1. User Check ---
-if [ "$(id -u)" -eq 0 ]; then
-    echo "Error: Please run as a normal user (without sudo)."
-    exit 1
-fi
-
+# 1. Message 
 echo "======================================================="
 echo "   Labwc Installer for Debian 13 (Trixie)              "
 echo "======================================================="
 echo "This script will configure USTC mirrors for Debian 13"
 echo "and install a complete Wayland desktop environment."
 echo ""
-
 echo ">> Preparing system..."
 
 # 2. Install HTTPS support first
