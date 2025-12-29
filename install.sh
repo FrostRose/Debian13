@@ -30,7 +30,6 @@ ask_yes_no() {
 
 # --- Step 1: Base System & Nala ---
 echo -e "${GREEN}[1/7] Installing Nala and updating system...${NC}"
-sudo apt update
 sudo apt install -y nala
 sudo nala update
 
@@ -57,8 +56,6 @@ echo -e "${GREEN}[4/7] Configuring Flatpak...${NC}"
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo --user
 
 flatpak remote-modify flathub --url=https://mirrors.ustc.edu.cn/flathub --user
-
-flatpak update --user
 
 flatpak install --user -y flathub \
   com.github.tchx84.Flatseal \
